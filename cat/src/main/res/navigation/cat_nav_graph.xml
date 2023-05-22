@@ -15,7 +15,10 @@
             app:destination="@id/bigCatFragment" />
         <action
             android:id="@+id/action_splashCatFragment_to_catFragment"
-            app:destination="@id/catFragment" />
+            app:destination="@id/catFragment"
+            app:launchSingleTop="false"
+            app:popUpTo="@id/splashCatFragment"
+            app:popUpToInclusive="true" />
     </fragment>
 
     <fragment
