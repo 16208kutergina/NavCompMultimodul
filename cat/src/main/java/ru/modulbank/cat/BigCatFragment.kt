@@ -8,6 +8,9 @@ import android.view.ViewGroup
 
 class BigCatFragment : Fragment() {
 
+    companion object{
+        const val ID_FRAGMENT = "BigCat"
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

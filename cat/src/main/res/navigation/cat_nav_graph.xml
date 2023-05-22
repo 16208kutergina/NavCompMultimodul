@@ -3,7 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cat_nav_graph"
-    app:startDestination="@id/catFragment">
+    app:startDestination="@id/splashCatFragment">
+
+    <fragment
+        android:id="@+id/splashCatFragment"
+        android:name="ru.modulbank.cat.SplashCatFragment"
+        android:label="SplashCatFragment"
+        tools:layout="@layout/fragment_splash_cat">
+        <action
+            android:id="@+id/action_splashCatFragment_to_bigCatFragment"
+            app:destination="@id/bigCatFragment" />
+        <action
+            android:id="@+id/action_splashCatFragment_to_catFragment"
+            app:destination="@id/catFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/catFragment"
@@ -12,13 +25,13 @@
         tools:layout="@layout/fragment_cat">
         <action
             android:id="@+id/action_catFragment_to_bigCatFragment"
-            app:destination="@id/smallCatFragment" />
+            app:destination="@id/bigCatFragment" />
     </fragment>
 
     <fragment
-        android:id="@+id/smallCatFragment"
+        android:id="@+id/bigCatFragment"
         android:name="ru.modulbank.cat.BigCatFragment"
-        android:label="SmallCatFragment"
+        android:label="BigCatFragment"
         tools:layout="@layout/fragment_big_cat"/>
 
 </navigation>

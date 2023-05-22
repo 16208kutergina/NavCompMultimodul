@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.fragment.findNavController
+import ru.modulbank.cat.BigCatFragment
+import ru.modulbank.cat.SplashCatFragment
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -39,12 +41,15 @@ class DogFragment : Fragment() {
         }
 
         catButton.setOnClickListener {
+//            К началу графа
             findNavController().navigate(R.id.action_dogFragment_to_cat_nav_graph)
         }
 
         bigCatButton.setOnClickListener {
-            //Не можем снавигироваться до нужного фрагмента сразу
-            findNavController().navigate(TODO())
+//            К экрану в середине графа
+            val bundle = Bundle()
+            bundle.putString(SplashCatFragment.CAT_NAVIGATION, BigCatFragment.ID_FRAGMENT)
+            findNavController().navigate(R.id.action_dogFragment_to_cat_nav_graph, bundle)
         }
     }
 }
