@@ -32,6 +32,7 @@ class DogFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val bigDogButton = view.findViewById<Button>(R.id.bigDogButton)
         val catButton = view.findViewById<Button>(R.id.catButton)
+        val bigCatButton = view.findViewById<Button>(R.id.bigCatButton)
 
         bigDogButton.setOnClickListener {
             findNavController().navigate(R.id.action_dogFragment_to_bigDogFragment)
@@ -39,6 +40,11 @@ class DogFragment : Fragment() {
 
         catButton.setOnClickListener {
             findNavController().navigate(R.id.action_dogFragment_to_cat_nav_graph)
+        }
+
+        bigCatButton.setOnClickListener {
+            //Не можем снавигироваться до нужного фрагмента сразу
+            findNavController().navigate(TODO())
         }
     }
 }
