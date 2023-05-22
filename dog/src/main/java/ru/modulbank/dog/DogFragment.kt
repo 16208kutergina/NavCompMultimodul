@@ -31,9 +31,14 @@ class DogFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val bigDogButton = view.findViewById<Button>(R.id.bigDogButton)
+        val catButton = view.findViewById<Button>(R.id.catButton)
 
         bigDogButton.setOnClickListener {
             findNavController().navigate(R.id.action_dogFragment_to_bigDogFragment)
+        }
+
+        catButton.setOnClickListener {
+            findNavController().navigate(R.id.action_dogFragment_to_cat_nav_graph)
         }
     }
 }

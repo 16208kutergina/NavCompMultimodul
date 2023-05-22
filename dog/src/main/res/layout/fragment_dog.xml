@@ -20,4 +20,11 @@
         android:text="Go to big dog"
         app:layout_constraintBottom_toBottomOf="parent" />
 
+    <Button
+        android:id="@+id/catButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go to Cat"
+        app:layout_constraintBottom_toTopOf="@+id/bigDogButton" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
